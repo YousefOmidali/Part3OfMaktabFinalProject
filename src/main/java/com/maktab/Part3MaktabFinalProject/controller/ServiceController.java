@@ -1,14 +1,11 @@
 package com.maktab.Part3MaktabFinalProject.controller;
 
-import com.maktab.Part3MaktabFinalProject.entity.Customer;
 import com.maktab.Part3MaktabFinalProject.entity.Service;
-import com.maktab.Part3MaktabFinalProject.entity.UserStatus;
 import com.maktab.Part3MaktabFinalProject.services.ServiceService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDateTime;
 
 @Controller
 @RequestMapping({"Service", "service"})

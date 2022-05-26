@@ -4,7 +4,6 @@ package com.maktab.Part3MaktabFinalProject.controller;
 import com.maktab.Part3MaktabFinalProject.entity.Comment;
 import com.maktab.Part3MaktabFinalProject.entity.Customer;
 import com.maktab.Part3MaktabFinalProject.entity.OrderStatus;
-import com.maktab.Part3MaktabFinalProject.entity.UserStatus;
 import com.maktab.Part3MaktabFinalProject.services.CommentService;
 import com.maktab.Part3MaktabFinalProject.services.CustomerService;
 import com.maktab.Part3MaktabFinalProject.services.OrderService;
@@ -12,7 +11,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDateTime;
 
 @Controller
 @RequestMapping({"comment", "Comment"})

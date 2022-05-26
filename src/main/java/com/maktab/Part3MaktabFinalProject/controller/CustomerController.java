@@ -1,9 +1,7 @@
 package com.maktab.Part3MaktabFinalProject.controller;
 
 import com.maktab.Part3MaktabFinalProject.entity.Customer;
-import com.maktab.Part3MaktabFinalProject.entity.Experts;
 import com.maktab.Part3MaktabFinalProject.entity.UserStatus;
-import com.maktab.Part3MaktabFinalProject.entity.Wallet;
 import com.maktab.Part3MaktabFinalProject.services.CustomerService;
 import com.maktab.Part3MaktabFinalProject.services.WalletService;
 import org.springframework.stereotype.Controller;

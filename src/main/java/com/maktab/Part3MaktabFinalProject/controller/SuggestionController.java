@@ -8,7 +8,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDateTime;
 import java.util.stream.Collectors;
 
 @Controller
@@ -32,7 +31,7 @@ public class SuggestionController {
 
     @PostMapping("save")
     public String saveOrUpdate(@ModelAttribute("suggestion") Suggestion suggestion) {
-        var order =orderService.findById(suggestion.getOrder().getId() );
+        var order = orderService.findById(suggestion.getOrder().getId());
         order.setOrderStatus(OrderStatus.WaitingForCustomerToChooseASuggestion);
         orderService.saveOrUpdate(order);
         suggestion.setOrder(order);
@@ -53,8 +52,7 @@ public class SuggestionController {
         var suggestionList = suggestionService.suggestionsOfAnOrder(order.getId())
                 .stream()
                 .filter(c -> c.getOrder().getOrderStatus().equals(OrderStatus.WaitingForCustomerToChooseASuggestion));
-
-        model.addAttribute("suggestionList",suggestionList.collect(Collectors.toList()) );
+        model.addAttribute("suggestionList", suggestionList.collect(Collectors.toList()));
         return "suggestionsOfAnOrderResultPage";
     }
 }

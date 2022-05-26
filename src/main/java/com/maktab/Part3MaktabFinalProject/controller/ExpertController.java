@@ -1,9 +1,7 @@
 package com.maktab.Part3MaktabFinalProject.controller;
 
-import com.maktab.Part3MaktabFinalProject.entity.Customer;
 import com.maktab.Part3MaktabFinalProject.entity.Experts;
 import com.maktab.Part3MaktabFinalProject.entity.UserStatus;
-import com.maktab.Part3MaktabFinalProject.entity.Wallet;
 import com.maktab.Part3MaktabFinalProject.services.ExpertsService;
 import com.maktab.Part3MaktabFinalProject.services.WalletService;
 import org.hibernate.engine.jdbc.BlobProxy;
@@ -12,7 +10,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
-import java.util.HashSet;
 
 @Controller
 @RequestMapping({"Expert", "expert"})

@@ -6,7 +6,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDateTime;
 
 @Controller
 @RequestMapping({"Admin", "admin"})
@@ -54,7 +53,7 @@ public class AdminController {
     @PostMapping({"search", "gridSearch", "gridsearch"})
     public String gridSearch(@ModelAttribute("admin") Admin admin, Model model) {
         var list = adminService.gridSearch(admin.getFirstname(), admin.getLastname()
-                , admin.getEmail(), admin.getUsername());;
+                , admin.getEmail(), admin.getUsername());
         model.addAttribute("adminList", list);
         return "adminSearchResultPage";
     }
