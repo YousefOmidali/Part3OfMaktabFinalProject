@@ -1,0 +1,42 @@
+package com.maktab.Part3MaktabFinalProject.services;
+
+
+import com.maktab.Part3MaktabFinalProject.entity.Service;
+import com.maktab.Part3MaktabFinalProject.repository.ServiceRepository;
+import com.maktab.Part3MaktabFinalProject.services.base.BaseService;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+
+@org.springframework.stereotype.Service
+public class ServiceService implements BaseService<Service, Long> {
+    private final ServiceRepository serviceRepository;
+
+    public ServiceService(ServiceRepository serviceRepository) {
+        this.serviceRepository = serviceRepository;
+    }
+
+    @Override
+    @Transactional
+    public Service saveOrUpdate(Service service) {
+        return serviceRepository.save(service);
+    }
+
+    @Override
+    @Transactional
+    public List<Service> findAll() {
+        return serviceRepository.findAll();
+    }
+
+    @Override
+    @Transactional
+    public Service findById(Long id) {
+        return serviceRepository.findById(id).orElse(null);
+    }
+
+    @Override
+    @Transactional
+    public void deleteById(Long id) {
+        serviceRepository.deleteById(id);
+    }
+}

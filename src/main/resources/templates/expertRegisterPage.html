@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Expert Registration</title>
+</head>
+<body>
+<div align="center" >
+    <h2>Expert Registration</h2>
+    <form action="#" th:action="@{/expert/expertRegister}" th:object="${expert}" method="post">
+        <label>firstname: </label><br>
+        <input type="text" th:field="*{firstname}"/><br>
+        <label>lastname: </label><br>
+        <input type="text" th:field="*{lastname}"/><br>
+        <label>email: </label><br>
+        <input type="text" th:field="*{email}"/><br>
+        <label>username: </label><br>
+        <input type="text" th:field="*{username}"/><br>
+        <label>password: </label><br>
+        <input type="password" th:field="*{password}"/><br>
+        <label>Wallet amount: </label><br>
+        <input type="number" th:field="*{wallet.amount}"/><br>
+        <label>image link: </label><br>
+        <input type="text" th:field="*{imageLink}"/><br><br>
+
+
+        <button type="submit">Register</button>
+    </form>
+</div>
+</body>
+</html>

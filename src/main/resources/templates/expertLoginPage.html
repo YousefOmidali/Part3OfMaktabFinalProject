@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Expert Login</title>
+</head>
+<body>
+<div align="center">
+    <h2>Expert Login</h2>
+    <form action="#" th:action="@{/expert/login}" th:object="${expert}" method="post">
+        <label>Username: </label>
+        <input type="text" th:field="*{username}"/><br><br>
+        <label>Password: </label>
+        <input type="password" th:field="*{password}"/><br><br>
+
+        <button type="submit">Login</button>
+        <br><br>
+        <a th:href="@{/expert/expertRegister}">SignUp </a>
+    </form>
+</div>
+</body>
+</html>
