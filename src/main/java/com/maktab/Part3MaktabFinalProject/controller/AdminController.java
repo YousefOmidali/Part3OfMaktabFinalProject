@@ -36,7 +36,7 @@ public class AdminController {
     }
 
     @PostMapping("login")
-    public String login(@ModelAttribute("expert") Admin admin) {
+    public String login(@ModelAttribute("admin") Admin admin) {
         var loginAdmin = adminService.login(admin.getUsername(), admin.getPassword());
         if (loginAdmin != null) {
             return "adminMenu";
